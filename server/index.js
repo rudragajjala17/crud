@@ -15,6 +15,10 @@ app.use(cors());
 app.use(express.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
+app.get("/", (req, res) => {
+    res.send("Welcome to sample demo");
+});
+
 app.get("/health-status", (req, res) => {
     res.send("App is Running Healthy, Thank you");
 });
